@@ -19,11 +19,13 @@ if ! command -v brew &>/dev/null; then
 fi
 
 # ── Install SwiftBar ─────────────────────────────────────────────────────────
-if ! brew list --cask swiftbar &>/dev/null; then
+SWIFTBAR_APP=$(mdfind "kMDItemCFBundleIdentifier == 'com.ameba.SwiftBar'" 2>/dev/null | head -1)
+
+if [[ -z "$SWIFTBAR_APP" ]]; then
   echo "📦 Installing SwiftBar via Homebrew..."
-  brew install --cask swiftbar
+  brew reinstall --cask swiftbar
 else
-  echo "✅ SwiftBar already installed"
+  echo "✅ SwiftBar already installed at $SWIFTBAR_APP"
 fi
 
 # ── Detect plugin directory ──────────────────────────────────────────────────
