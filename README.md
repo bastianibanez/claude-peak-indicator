@@ -12,14 +12,14 @@ curl -fsSL https://raw.githubusercontent.com/bastianibanez/claude-peak-indicator
 
 ## What It Shows
 
-- **Orange dot** — Peak hours (standard usage limits)
-- **Green dot** — Off-peak (2x usage bonus active)
+- **Orange dot** — Peak hours (session limits drain faster)
+- **Green dot** — Off-peak (good time for token-intensive tasks)
 
 ## Schedule
 
-Peak hours: **Monday–Friday, 8 AM – 2 PM ET**
+Peak hours: **Monday–Friday, 5 AM – 11 AM PT**
 
-Outside those hours (evenings, weekends) you get 2x usage.
+During peak hours, your 5-hour session limits are consumed faster than usual. Shifting heavy background jobs to off-peak hours stretches your weekly limits further.
 
 ## Uninstall
 
